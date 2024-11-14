@@ -1,14 +1,19 @@
 [[input.prepend_keymap]]
 on   = [ "<Esc>" ]
-exec = "close"
+run = "close"
 desc = "Cancel input"
 
 [[manager.prepend_keymap]]
 on   = [ "l" ]
-exec = "plugin --sync smart-enter"
+run = "plugin --sync smart-enter"
 desc = "Enter the child directory, or open the file"
 
 [[manager.prepend_keymap]]
 on   = [ "<Enter>" ]
-exec = "plugin --sync smart-enter"
+run = "plugin --sync smart-enter"
 desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on   = [ "<C-e>" ]
+run = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"
